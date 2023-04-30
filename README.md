@@ -13,5 +13,5 @@ pip install strava-oauth
 ## Basic Usage
 ```sh
 strava-oauth register_app -c {client_id} -s {client_secret}
-strava-oauth authorize
+strava-oauth authorize -c {client_id}
 ```
