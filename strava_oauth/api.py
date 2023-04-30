@@ -57,5 +57,5 @@ def callback(client_id):
                                 expires_at=token_data['expires_at'],
                                 app_client_id=strava_app.client_id)
 
-  return {'oauth_token': new_token}, 201
+  return {'oauth_token': new_token.to_dict()}, 201
   
