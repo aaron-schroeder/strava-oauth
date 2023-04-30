@@ -1,0 +1,33 @@
+# pyproject.toml
+
+[build-system]
+requires = ['setuptools>=61.0.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'strava_oauth'
+version = '0.0.1-alpha.1'
+description = 'Create, store, load, and refresh OAuth tokens for the Strava API'
+readme = { file = 'README.md', content-type = 'text/markdown' }
+requires-python = '>=3.8'
+authors = [{name = 'Aaron Schroeder', email = 'aaron@trailzealot.com'}]
+license = 'MIT'
+classifiers = [
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3',
+]
+dependencies = [
+    'Flask',
+    'sqlalchemy>=1.4',
+    'requests'
+]
+
+[project.scripts]
+strava-oauth = "strava_oauth.server:main"
+
+[project.urls]
+Homepage = 'https://github.com/aaron-schroeder/strava-oauth'
+
+[tool.setuptools.packages.find]
+include = ["strava_oauth*"]  # package names should match these glob patterns (["*"] by default)
